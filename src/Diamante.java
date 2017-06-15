@@ -1,9 +1,7 @@
 import java.lang.*;
 
-/**
- * Created by fborja on 14/6/17.
- */
-public class Diamante {
+
+public  class Diamante {
 
     private static String lineaAsterisco(int n){
         String s="*";
@@ -23,7 +21,7 @@ public class Diamante {
     }
     private static String lineaRotulada(int n){
         StringBuilder sb = new StringBuilder(lineaAsterisco(n));
-        if (n<4) sb=(sb.replace(n-1,n+2,"FB!"));
+        if (n<4) sb=(sb.replace(n-1,n+2,"FB!")); //'replace' con inicio y fin esta disponible exclusivamente en stringbuilder
         else sb=(sb.replace(n-3,n+4,"FELIPE!"));
         return sb.toString();
     }
@@ -65,34 +63,6 @@ public class Diamante {
         s=lineaRotulada(x);
         System.out.println(s);
         s=isóselesTruncado(x);
-        /*
-        StringBuilder s= new StringBuilder();
-        System.out.println("7.- "+n+":");
-        while(n>0) {        //triángulo
-            m=n-1;
-            while (m>0){
-                System.out.print(" ");
-                m--;
-            }
-            if (n==x)s.append("*");
-            else s.append("**");
-            if (n!=1) System.out.println(s);
-            n--;
-        }
-        */
-
-        /*
-        while(n<(x-1)) {        //triángulo inverso
-            m=n+1;
-            while (m>0){
-                System.out.print(" ");
-                m--;
-            }
-            s.setLength(s.length() - 2);
-            System.out.println(s);
-            n++;
-        }
-        */
         return s;
     }
 }
